@@ -16,27 +16,29 @@
 // if < 18
 // if > 18
 
-
-
-
+function ilTuoBiglietto(){
+    let etaUtente = parseInt( document.getElementById('etaUtente').value);
+    console.log(etaUtente)
+    let kmUtente = parseFloat( document.getElementById('kmUtente').value);
+    console.log(kmUtente)
 
 
 //età utente
-let etaUtente = parseInt(prompt('inserisci la tua età'));
-console.log(etaUtente);
+//let etaUtente = parseInt(prompt('inserisci la tua età'));
+//console.log(etaUtente);
 
 //kilometri
-let kmUtente = parseInt(prompt('inserisci quanti km vuoi fare'));
-console.log(kmUtente);
+//let kmUtente = parseInt(prompt('inserisci quanti km vuoi fare'));
+//console.log(kmUtente);
 
 //prezzo ticket
 
 let prezzoTicket = kmUtente * 0.21;
 console.log(prezzoTicket);
 
-let sconto20 = prezzoTicket * 100 / 20;
+let sconto20 = ( ( prezzoTicket / 100 ) * 20);
 
-let sconto40 = prezzoTicket * 100 / 40; 
+let sconto40 = ( ( prezzoTicket / 100 ) * 20); 
 
 //condizioni
 //18 anni
@@ -57,9 +59,7 @@ if (etaUtente < 18){
 
 document.getElementById("ilTuoBiglietto").innerHTML= `Il prezzo del biglietto è: ${prezzoTicket.toFixed(2)} Euro`;
 
- 
-
-
+}
 
 
 
